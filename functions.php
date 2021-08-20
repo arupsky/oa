@@ -135,12 +135,10 @@ function oa_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'oa_widgets_init' );
-
 /**
  * Enqueue scripts and styles.
  */
 function oa_scripts() {
-	wp_enqueue_style( 'oa-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'oa-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'oa-style', 'rtl', 'replace' );
 	wp_register_style( 'Foundation', 'https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css' );
